@@ -233,7 +233,6 @@ def main(page: ft.Page):
     t = ft.Text()
     t.value = "Veuillez sélectionner un fichier"
     page.add(t)
-    
     fileOption = getFiles()
     dd = ft.Dropdown(
             on_change=dropdown_changed,
@@ -241,6 +240,12 @@ def main(page: ft.Page):
             width=200,
     )
     t = ft.Text()
+    c1 = ft.Container(
+        content=ft.Column([t,dd]),
+        bgcolor=ft.colors.YELLOW,
+        padding=5,
+    )
+   
 
 
     conf = ft.ResponsiveRow(  [
@@ -253,6 +258,10 @@ def main(page: ft.Page):
 
     
     page.add(conf, t)
+    nameinput = ft.TextField(label="Search name",
+		)
+    page.add(nameinput)
+    
 
     page.title = "CARIBOU"
 
