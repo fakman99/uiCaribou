@@ -9,6 +9,7 @@ Script GUI de CARIBOU avec flet
 Usage: uitest.py
 """
 
+
 def main(page: ft.Page):
     # INITALISATION DES TABLEAUX
     def tableInit():
@@ -20,9 +21,12 @@ def main(page: ft.Page):
                     ft.Column(col={"sm": 6}, controls=[ft.Container(
                         content=ft.DataTable(
                             columns=[
-                                ft.DataColumn(ft.Text("First name")),
-                                ft.DataColumn(ft.Text("Last name")),
-                                ft.DataColumn(ft.Text("Age"), numeric=True),
+                                ft.DataColumn(ft.Text("First name",weight=ft.FontWeight.BOLD,
+                                                      )),
+                                ft.DataColumn(ft.Text("Last name",weight=ft.FontWeight.BOLD,
+                                                      )),
+                                ft.DataColumn(ft.Text("Age",weight=ft.FontWeight.BOLD,
+                                                      ), numeric=True),
                             ],
                             rows=[
                                 ft.DataRow(
@@ -59,9 +63,12 @@ def main(page: ft.Page):
                     ft.Column(col={"sm": 6}, controls=[ft.Container(
                         content=ft.DataTable(
                             columns=[
-                                ft.DataColumn(ft.Text("First name")),
-                                ft.DataColumn(ft.Text("Last name")),
-                                ft.DataColumn(ft.Text("Age"), numeric=True),
+                                ft.DataColumn(ft.Text("First name",weight=ft.FontWeight.BOLD,
+                                                      )),
+                                ft.DataColumn(ft.Text("Last name",weight=ft.FontWeight.BOLD,
+                                                      )),
+                                ft.DataColumn(ft.Text("Age",weight=ft.FontWeight.BOLD,
+                                                      ), numeric=True),
                             ],
                             rows=[
                                 ft.DataRow(
@@ -96,9 +103,12 @@ def main(page: ft.Page):
                     ),]), ft.Column(col={"sm": 6}, controls=[ft.Container(
                         content=ft.DataTable(
                             columns=[
-                                ft.DataColumn(ft.Text("First name")),
-                                ft.DataColumn(ft.Text("Last name")),
-                                ft.DataColumn(ft.Text("Age"), numeric=True),
+                                ft.DataColumn(ft.Text("First name",weight=ft.FontWeight.BOLD,
+                                                      )),
+                                ft.DataColumn(ft.Text("Last name",weight=ft.FontWeight.BOLD,
+                                                      )),
+                                ft.DataColumn(ft.Text("Age",weight=ft.FontWeight.BOLD,
+                                                      ), numeric=True),
                             ],
                             rows=[
                                 ft.DataRow(
@@ -133,9 +143,12 @@ def main(page: ft.Page):
                     ),]), ft.Column(col={"sm": 6}, controls=[ft.Container(
                         content=ft.DataTable(
                             columns=[
-                                ft.DataColumn(ft.Text("First name")),
-                                ft.DataColumn(ft.Text("Last name")),
-                                ft.DataColumn(ft.Text("Age"), numeric=True),
+                                ft.DataColumn(ft.Text("First name",weight=ft.FontWeight.BOLD,
+                                                      )),
+                                ft.DataColumn(ft.Text("Last name",weight=ft.FontWeight.BOLD,
+                                                      )),
+                                ft.DataColumn(ft.Text("Age",weight=ft.FontWeight.BOLD,
+                                                      ), numeric=True),
                             ],
                             rows=[
                                 ft.DataRow(
@@ -170,9 +183,12 @@ def main(page: ft.Page):
                     ),]), ft.Column(col={"sm": 6}, controls=[ft.Container(
                         content=ft.DataTable(
                             columns=[
-                                ft.DataColumn(ft.Text("First name")),
-                                ft.DataColumn(ft.Text("Last name")),
-                                ft.DataColumn(ft.Text("Age"), numeric=True),
+                                ft.DataColumn(ft.Text("First name",weight=ft.FontWeight.BOLD,
+                                                      )),
+                                ft.DataColumn(ft.Text("Last name",weight=ft.FontWeight.BOLD,
+                                                      )),
+                                ft.DataColumn(ft.Text("Age",weight=ft.FontWeight.BOLD,
+                                                      ), numeric=True),
                             ],
                             rows=[
                                 ft.DataRow(
@@ -264,7 +280,7 @@ def main(page: ft.Page):
         )
         page.add(configContainer, selectedFileContainer, searchContainer)
         page.update()
-        
+
     selectedFiletoString = ft.Text()
     fileOption = getFiles()
 
